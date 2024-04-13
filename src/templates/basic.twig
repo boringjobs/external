@@ -1,0 +1,81 @@
+{% extends '_layout.twig' %}
+
+{% block title %}
+  {{ resume.basic.name }}
+{% endblock %}
+
+{% block content %}
+  <header id="basics">
+    <h1>
+      {{ resume.basics.name }}
+      <span>{{ resume.basic.label }}</span>
+    </h1>
+    <div>
+      <a href="mailto:{{ resume.basics.email }}" id="basics-email">{{ resume.basics.email }}</a>
+      <a href="tel:{{ resume.basics.phone }}" id="basics-phone">{{ resume.basics.phone }}</a>
+      <a href="{{ resume.basics.url }}" id="basics-url" target="_blank">{{ resume.basics.url }}</a>
+    </div>
+  </header>
+
+  <main>
+    {% if resume.basic.summary %}
+      <section>
+        <header>
+          <h2>Summary</h2>
+        </header>
+        <main>
+          <p>{{ resume.basics.summary }}</p>
+        </main>
+      </section>
+    {% endif %}
+
+    {% if resume.work %}
+      <section>
+        <header>
+          <h2>Work Experience</h2>
+        </header>
+        <main>
+          {% for job in resume.work %}
+            <h3>{{ job.company }} - {{ job.position }}</h3>
+            <p>{{ job.startDate }} - {{ job.endDate|default('Present') }}</p>
+            <p>{{ job.summary }}</p>
+            <ul>
+              {% for highlight in job.highlights %}
+                <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          {% endfor %}
+        </main>
+      </section>
+    {% endif %}
+
+    {% if resume.education %}
+      <section>
+        <header>
+          <h2>Education</h2>
+        </header>
+        <main>
+          {% for education in resume.education %}
+            <h3>{{ education.institution }} - {{ education.area }}</h3>
+            <p>{{ education.studyType }}, {{ education.startDate }} - {{ education.endDate }}</p>
+          {% endfor %}
+        </main>
+      </section>
+    {% endif %}
+
+    {% if resume.skills %}
+      <section>
+        <header>
+          <h2>Skills</h2>
+        </header>
+        <main>
+          <ul>
+            {% for skill in resume.skills %}
+              <li>{{ skill.name }} ({{ skill.level }})</li>
+            {% endfor %}
+          </ul>
+        </main>
+      </section>
+    {% endif %}
+  </main>
+{% endblock %}

@@ -1,14 +1,14 @@
 import * as fs from "node:fs/promises";
 import * as pdf from "pdf-parse";
 
-export const PDFToString = async (filepath: string) => {
+export const ParsePDF = async (filepath: string) => {
   try {
     const file = await fs.readFile(filepath);
 
-    return new Promise<pdf.Result>((res, rej) => {
+    return new Promise<string>((res, rej) => {
       pdf(file)
         .then((data: pdf.Result) => {
-          res(data);
+          res(data.text);
         })
         .catch((error: Error) => {
           rej(error);
