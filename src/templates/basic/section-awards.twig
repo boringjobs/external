@@ -1,14 +1,20 @@
-<section>
-  <header>
+<section id="section-awards">
+  <header id="awards-header">
     <h2>Awards</h2>
   </header>
-  <main>
-    <ul>
+  <main id="awards-content">
+    <ul id="awards-list">
       {% for award in resume.awards %}
-        <li>
-          <h3>{{ award.title }} - {{ award.awarder }}</h3>
-          <p>{{ award.date }}</p>
-          <p>{{ award.summary }}</p>
+        <li class="award">
+          {% if award.title %}
+            <h3 class="award-title">{{ award.title }}<span class="award-awarder">{{ award.awarder ? ' - ' : '' }}{{ award.awarder }}</span></h3>
+          {% endif %}
+          {% if award.date %}
+            <p class="award-date">{{ award.date }}</p>
+          {% endif %}
+          {% if award.summary %}
+            <p class="award-summary">{{ award.summary }}</p>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>

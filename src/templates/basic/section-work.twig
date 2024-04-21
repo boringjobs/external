@@ -1,17 +1,31 @@
-<section>
-  <header>
+<section id="section-work">
+  <header id="work-header">
     <h2>Work Experience</h2>
   </header>
-  <main>
-    {% for job in resume.work %}
-      <h3>{{ job.company }} - {{ job.position }}</h3>
-      <p>{{ job.startDate }} - {{ job.endDate|default('Present') }}</p>
-      <p>{{ job.summary }}</p>
-      <ul>
-        {% for highlight in job.highlights %}
-          <li>{{ highlight }}</li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
+  <main id="work-content">
+    <ul id="work-list">
+      {% for job in resume.work %}
+        <li class="work">
+          {% if job.company or job.position %}
+            <h3 class="work-company">{{ job.company }}<span class="work-position">{{ job.position ? ' - ' : '' }}{{ job.position }}</span></h3>
+          {% endif %}
+          {% if job.startDate %}
+            <p class="work-start">
+              {{ job.startDate }} - <span class="work-end">{{ job.endDate|default('Present') }}</span>
+            </p>
+          {% endif %}
+          {% if job.summary %}
+            <p class="work-summary">{{ job.summary }}</p>
+          {% endif %}
+          {% if job.highlights %}
+            <ul class="work-highlights-list">
+              {% for highlight in job.highlights %}
+                <li class="work-highlight">{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </main>
 </section>

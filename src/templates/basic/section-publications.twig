@@ -1,15 +1,23 @@
-<section>
-  <header>
+<section id="section-publications">
+  <header id="publications-header">
     <h2>Publications</h2>
   </header>
-  <main>
-    <ul>
+  <main id="publications-content">
+    <ul id="publications-list">
       {% for publication in resume.publications %}
-        <li>
-          <h3>{{ publication.name }} - {{ publication.publisher }}</h3>
-          <p>{{ publication.releaseDate }}</p>
-          <a href="{{ publication.url }}">{{ publication.url }}</a>
-          <p>{{ publication.summary }}</p>
+        <li class="publication">
+          {% if publication.name or publication.publisher %}
+            <h3>{{ publication.name ?? '' }}{{ publication.name and publication.publisher ? '-' : '' }}<span class="publication-publisher">{{ publication.publisher ?? '' }}</span></h3>
+          {% endif %}
+          {% if publication.releaseDate %}
+            <p class="publication-releasedate">{{ publication.releaseDate }}</p>
+          {% endif %}
+          {% if publication.url %}
+            <a class="publication-url" href="{{ publication.url }}">{{ publication.url }}</a>
+          {% endif %}
+          {% if publication.summary %}
+            <p class="publication-summary">{{ publication.summary }}</p>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>

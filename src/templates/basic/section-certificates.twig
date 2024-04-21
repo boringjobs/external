@@ -1,14 +1,20 @@
-<section>
-  <header>
+<section id="section-certificates">
+  <header id="certificates-header">
     <h2>Certificates</h2>
   </header>
-  <main>
-    <ul>
+  <main id="certificates-content">
+    <ul id="certificates-list">
       {% for certificate in resume.certificates %}
-        <li>
-          <h3>{{ certificate.name }} - {{ certificate.issuer }}</h3>
-          <p>{{ certificate.date }}</p>
-          <a href="{{ certificate.url }}">{{ certificate.url }}</a>
+        <li class="certificate">
+          {% if certificate.name %}
+            <h3 class="certificate-name">{{ certificate.name }}<span class="certificate-issuer">{{ certificate.issuer ? ' - ' : '' }}{{ certificate.issuer }}</span></h3>
+          {% endif %}
+          {% if certificate.date %}
+            <p class="certificate-date">{{ certificate.date }}</p>
+          {% endif %}
+          {% if certificate.url %}
+            <a class="certificate-url" href="{{ certificate.url }}">{{ certificate.url }}</a>
+          {% endif %}
         </li>
       {% endfor %}
     </ul>

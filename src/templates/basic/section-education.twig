@@ -1,11 +1,21 @@
-<section>
-  <header>
+<section id="section-education">
+  <header id="education-header">
     <h2>Education</h2>
   </header>
-  <main>
-    {% for education in resume.education %}
-      <h3>{{ education.institution }} - {{ education.area }}</h3>
-      <p>{{ education.studyType }}, {{ education.startDate }} - {{ education.endDate }}</p>
-    {% endfor %}
+  <main id="education-content">
+    <ul id="education-list">
+      {% for education in resume.education %}
+        <li class="education">
+          {% if education.institution %}
+            <h3 class="education-institution">{{ education.institution }}{{ education.area ? ' - ' : '' }}{{ education.area }}</h3>
+          {% endif %}
+          {% if education.studyType or education.startDate %}
+            <p class="education-type">
+              <span class="education-study-type">{{ education.studyType }}</span><span class="education-dates">{{ education.startDate ? ', ' : '' }}{{ education.startDate }}{{ education.endDate ? ' - ' : '' }}{{ education.endDate }}</span>
+            </p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </main>
 </section>

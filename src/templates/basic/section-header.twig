@@ -1,4 +1,4 @@
-<header id="basics">
+<header id="section-basics">
   {% if resume.basics.name %}
     <h1 id="basics-name">
       {{ resume.basics.name }}
@@ -7,18 +7,24 @@
   {% endif %}
   <div id="basics-contact">
     {% if resume.basics.email %}
-      <a href="mailto:{{ resume.basics.email }}" id="basics-email" class="basics-contact-link">{{ resume.basics.email }}</a>
+      <a href="mailto:{{ resume.basics.email }}" id="email">{{ resume.basics.email }}</a>
     {% endif %}
     {% if resume.basics.phone %}
-      <a href="tel:{{ resume.basics.phone }}" id="basics-phone" class="basics-contact-link">{{ resume.basics.phone }}</a>
+      <a href="tel:{{ resume.basics.phone }}" id="phone">{{ resume.basics.phone }}</a>
     {% endif %}
     {% if resume.basics.url %}
-      <a href="{{ resume.basics.url }}" id="basics-url" class="basics-contact-link" target="_blank">{{ resume.basics.url }}</a>
+      <a href="{{ resume.basics.url }}" id="url" target="_blank">{{ resume.basics.url }}</a>
     {% endif %}
 
-    {% for profile in resume.basics.profiles %}
-      <a href="{{ profile.url }}" class="basics-contact-link" target="_blank">{{ profile.network }}</a>
-    {% endfor %}
+    {% if resume.basics.profiles %}
+      <ul id="profiles-list">
+        {% for profile in resume.basics.profiles %}
+          <li class="profile">
+            <a href="{{ profile.url }}" class="profile-link" target="_blank">{{ profile.network }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </div>
   <address id="basics-location">
     {% if resume.basics.location.address %}

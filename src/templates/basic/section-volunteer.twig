@@ -1,17 +1,31 @@
-<section>
-  <header>
+<section id="section-volunteer">
+  <header id="volunteer-header">
     <h2>Volunteer</h2>
   </header>
-  <main>
-    {% for volunteer in resume.volunteer %}
-      <h3>{{ volunteer.organization }} - {{ education.position }}</h3>
-      <p>{{ volunteer.startDate }} - {{ volunteer.endDate|default('Present') }}</p>
-      <p>{{ volunteer.summary }}</p>
-      <ul>
-        {% for highlight in volunteer.highlights %}
-          <li>{{ highlight }}</li>
-        {% endfor %}
-      </ul>
-    {% endfor %}
+  <main id="volunteer-content">
+    <ul id="volunteer-list">
+      {% for volunteer in resume.volunteer %}
+        <li class="volunteer">
+          {% if volunteer.organization %}
+            <h3 class="volunteer-organization">{{ volunteer.organization }}<span class="volunteer-position">{{ volunteer.position ? ' - ' : '' }}{{ volunteer.position }}</span></h3>
+          {% endif %}
+          {% if volunter.startDate %}
+            <p class="volunteer-start">
+              {{ volunteer.startDate }} - <span class="volunteer-end">{{ volunteer.endDate|default('Present') }}</span>
+            </p>
+          {% endif %}
+          {% if volunteer.summary %}
+            <p class="volunteer-summary">{{ volunteer.summary }}</p>
+          {% endif %}
+          {% if volunteer.highlights %}
+            <ul class="volunteer-highlights-list">
+              {% for highlight in volunteer.highlights %}
+                <li class="volunteer-highlight">{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
   </main>
 </section>

@@ -1,11 +1,22 @@
-<section>
-  <header>
+<section id="section-skills">
+  <header id="skills-header">
     <h2>Skills</h2>
   </header>
-  <main>
-    <ul>
+  <main id="skills-content">
+    <ul id="skills-list">
       {% for skill in resume.skills %}
-        <li>{{ skill.name }} ({{ skill.level }})</li>
+        <li class="skill">
+          {% if skill.name %}
+            <h3 class="skill-name">{{ skill.name }}<span class="skill-level">{{ skill.level ? '(' : '' }}{{ skill.level }}{{ skill.level ? ')' : '' }}</span></h3>
+          {% endif %}
+          {% if skill.keywords %}
+            <ul class="skill-keywords-list">
+              {% for keyword in skill.keywords %}
+                <li class="skill-keyword">{{ keyword }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </main>
