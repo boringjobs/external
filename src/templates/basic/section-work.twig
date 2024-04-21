@@ -1,0 +1,17 @@
+<section>
+  <header>
+    <h2>Work Experience</h2>
+  </header>
+  <main>
+    {% for job in resume.work %}
+      <h3>{{ job.company }} - {{ job.position }}</h3>
+      <p>{{ job.startDate }} - {{ job.endDate|default('Present') }}</p>
+      <p>{{ job.summary }}</p>
+      <ul>
+        {% for highlight in job.highlights %}
+          <li>{{ highlight }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </main>
+</section>

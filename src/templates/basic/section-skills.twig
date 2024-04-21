@@ -1,0 +1,12 @@
+<section>
+  <header>
+    <h2>Skills</h2>
+  </header>
+  <main>
+    <ul>
+      {% for skill in resume.skills %}
+        <li>{{ skill.name }} ({{ skill.level }})</li>
+      {% endfor %}
+    </ul>
+  </main>
+</section>

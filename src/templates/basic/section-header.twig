@@ -1,0 +1,43 @@
+<header id="basics">
+  {% if resume.basics.name %}
+    <h1 id="basics-name">
+      {{ resume.basics.name }}
+      <span>{{ resume.basic.label }}</span>
+    </h1>
+  {% endif %}
+  <div id="basics-contact">
+    {% if resume.basics.email %}
+      <a href="mailto:{{ resume.basics.email }}" id="basics-email" class="basics-contact-link">{{ resume.basics.email }}</a>
+    {% endif %}
+    {% if resume.basics.phone %}
+      <a href="tel:{{ resume.basics.phone }}" id="basics-phone" class="basics-contact-link">{{ resume.basics.phone }}</a>
+    {% endif %}
+    {% if resume.basics.url %}
+      <a href="{{ resume.basics.url }}" id="basics-url" class="basics-contact-link" target="_blank">{{ resume.basics.url }}</a>
+    {% endif %}
+
+    {% for profile in resume.basics.profiles %}
+      <a href="{{ profile.url }}" class="basics-contact-link" target="_blank">{{ profile.network }}</a>
+    {% endfor %}
+  </div>
+  <address id="basics-location">
+    {% if resume.basics.location.address %}
+      <div id="basics-location-address">{{ resume.basics.location.address }}</div>
+    {% endif %}
+    {% if resume.basics.location.address %}
+      <div id="basics-location-address">{{ resume.basics.location.address }}</div>
+    {% endif %}
+    {% if resume.basics.location.postalCode %}
+      <div id="basics-location-postalCode">{{ resume.basics.location.postalCode }}</div>
+    {% endif %}
+    {% if resume.basics.location.city %}
+      <div id="basics-location-city">{{ resume.basics.location.city }}</div>
+    {% endif %}
+    {% if resume.basics.location.countryCode %}
+      <div id="basics-location-countryCode">{{ resume.basics.location.countryCode }}</div>
+    {% endif %}
+    {% if resume.basics.location.region %}
+      <div id="basics-location-region">{{ resume.basics.location.region }}</div>
+    {% endif %}
+  </address>
+</header>

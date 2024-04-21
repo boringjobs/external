@@ -1,0 +1,16 @@
+<section>
+  <header>
+    <h2>Awards</h2>
+  </header>
+  <main>
+    <ul>
+      {% for award in resume.awards %}
+        <li>
+          <h3>{{ award.title }} - {{ award.awarder }}</h3>
+          <p>{{ award.date }}</p>
+          <p>{{ award.summary }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+</section>

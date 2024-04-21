@@ -1,0 +1,16 @@
+<section>
+  <header>
+    <h2>Certificates</h2>
+  </header>
+  <main>
+    <ul>
+      {% for certificate in resume.certificates %}
+        <li>
+          <h3>{{ certificate.name }} - {{ certificate.issuer }}</h3>
+          <p>{{ certificate.date }}</p>
+          <a href="{{ certificate.url }}">{{ certificate.url }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+</section>

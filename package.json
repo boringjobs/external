@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.ts",
   "scripts": {
-    "start": "npx tsc && cp -r ./src/templates ./dist/ && node dist/app.js",
+    "start": "npx tsc && rm -rf ./dist/templates && cp -r ./src/templates ./dist/ && node dist/app.js",
     "test": "npx test:lint && npx test:jest",
     "test:jest": "jest",
     "test:lint": "npx eslint ."

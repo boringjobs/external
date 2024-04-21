@@ -1,0 +1,18 @@
+<section>
+  <header>
+    <h2>Projects</h2>
+  </header>
+  <main>
+    {% for project in resume.projects %}
+      <h3>{{ project.name }}</h3>
+      <p>{{ project.startDate }} - {{ project.endDate|default('Present') }}</p>
+      <a href="{{ project.url }}">{{ project.url }}</a>
+      <p>{{ project.description }}</p>
+      <ul>
+        {% for highlight in project.highlights %}
+          <li>{{ highlight }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </main>
+</section>

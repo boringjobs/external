@@ -1,0 +1,41 @@
+{% block content %}
+  {% include 'section-header.twig' with { resume: resume } %}
+
+  <main>
+    {% if resume.basic.summary %}
+      {% include 'section-summary.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.work %}
+      {% include 'section-work.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.education %}
+      {% include 'section-education.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.volunteer %}
+      {% include 'section-volunteer.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.skills %}
+      {% include 'section-skills.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.awards %}
+      {% include 'section-awards.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.certificates %}
+      {% include 'section-certificates.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.publications %}
+      {% include 'section-publications.twig' with { resume: resume } %}
+    {% endif %}
+
+    {% if resume.projects %}
+      {% include 'section-projects.twig' with { resume: resume } %}
+    {% endif %}
+  </main>
+{% endblock %}

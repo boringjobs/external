@@ -1,0 +1,17 @@
+<section>
+  <header>
+    <h2>Volunteer</h2>
+  </header>
+  <main>
+    {% for volunteer in resume.volunteer %}
+      <h3>{{ volunteer.organization }} - {{ education.position }}</h3>
+      <p>{{ volunteer.startDate }} - {{ volunteer.endDate|default('Present') }}</p>
+      <p>{{ volunteer.summary }}</p>
+      <ul>
+        {% for highlight in volunteer.highlights %}
+          <li>{{ highlight }}</li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  </main>
+</section>

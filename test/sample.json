@@ -19,11 +19,6 @@
         "network": "Twitter",
         "username": "john",
         "url": "https://twitter.com/john"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "devalexwhite",
-        "url": "https://twitter.com/devalexwhite"
       }
     ]
   },
@@ -36,13 +31,6 @@
       "endDate": "2014-01-01",
       "summary": "Description…",
       "highlights": ["Started the company"]
-    },
-    {
-      "name": "Company 2",
-      "position": "Developer",
-      "startDate": "2013",
-      "endDate": "2014",
-      "summary": "Description…"
     }
   ],
   "volunteer": [
@@ -50,8 +38,8 @@
       "organization": "Organization",
       "position": "Volunteer",
       "url": "https://organization.com/",
-      "startDate": "2012",
-      "endDate": "2013",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
       "summary": "Description…",
       "highlights": ["Awarded 'Volunteer of the Month'"]
     }
@@ -66,13 +54,6 @@
       "endDate": "2013-01-01",
       "score": "4.0",
       "courses": ["DB1101 - Basic SQL"]
-    },
-    {
-      "institution": "College",
-      "url": "https://institution.com/",
-      "area": "Communications",
-      "studyType": "Bachelor",
-      "endDate": "2013"
     }
   ],
   "awards": [
@@ -80,10 +61,6 @@
       "title": "Award",
       "date": "2014-11-01",
       "awarder": "Company",
-      "summary": "There is no spoon."
-    },
-    {
-      "title": "Award",
       "summary": "There is no spoon."
     }
   ],
@@ -109,48 +86,24 @@
       "name": "Web Development",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
-    },
-    {
-      "name": "Backend Development",
-      "keywords": ["C#", ".NET", "Java"]
-    },
-    {
-      "name": "Design",
-      "keywords": [
-        "Figma",
-        "User Research",
-        "User Experience",
-        "Customer Interviews"
-      ]
     }
   ],
   "languages": [
     {
       "language": "English",
       "fluency": "Native speaker"
-    },
-    {
-      "language": "Chinese"
     }
   ],
   "interests": [
     {
       "name": "Wildlife",
       "keywords": ["Ferrets", "Unicorns"]
-    },
-    {
-      "name": "Photography",
-      "keywords": ["DSLR", "Photoshop", "Photo Editing"]
     }
   ],
   "references": [
     {
       "name": "Jane Doe",
-      "reference": "jane@janedoe.com"
-    },
-    {
-      "name": "Thomas Jefferson",
-      "reference": "(123) 456-7890"
+      "reference": "Reference…"
     }
   ],
   "projects": [
@@ -159,16 +112,7 @@
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "description": "Description...",
-      "highlights": [
-        "Won award at AIHacks 2016",
-        "Bought out by a venture capital"
-      ],
-      "url": "https://project.com/"
-    },
-    {
-      "name": "Project 2",
-      "endDate": "2021",
-      "description": "Description...",
+      "highlights": ["Won award at AIHacks 2016"],
       "url": "https://project.com/"
     }
   ]

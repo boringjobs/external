@@ -1,0 +1,17 @@
+<section>
+  <header>
+    <h2>Publications</h2>
+  </header>
+  <main>
+    <ul>
+      {% for publication in resume.publications %}
+        <li>
+          <h3>{{ publication.name }} - {{ publication.publisher }}</h3>
+          <p>{{ publication.releaseDate }}</p>
+          <a href="{{ publication.url }}">{{ publication.url }}</a>
+          <p>{{ publication.summary }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+</section>
