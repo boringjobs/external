@@ -16,7 +16,7 @@ const optionDefinitions: Array<commandLineArgs.OptionDefinition> = [
     alias: "t",
     type: String,
     multiple: true,
-    defaultValue: ["clean", "modern", "professional", "impressive", "sleek"],
+    defaultValue: ["minimal", "modern"],
   },
 ];
 

@@ -77,7 +77,6 @@ export const ResumeStringToJSONResume = async (resume: string) => {
   });
 
   if (!chatCompletion?.choices?.length) return {};
-  console.log(chatCompletion?.choices[0]?.message?.content);
   try {
     const json = JSON.parse(
       chatCompletion?.choices[0]?.message?.content ?? "{}"
