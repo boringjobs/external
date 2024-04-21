@@ -1,0 +1,140 @@
+{
+  "basics": {
+    "name": "Alex White",
+    "label": "Senior UX Engineer",
+    "image": "",
+    "email": "alex.white@hey.com",
+    "phone": "740.331.2854",
+    "url": "https://johndoe.com",
+    "summary": "Creative and solutiodn-driven professional with 10+ years in full stack development. Expertise includes user experience, front end development, accessibility, and backend development. Proven track record of leading technical teams and overseeing software development lifecycles from inception through launch.",
+    "location": {
+      "city": "Columbus",
+      "countryCode": "US",
+      "region": "Ohio"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "devalexwhite",
+        "url": "linkedin.com/in/devalexwhite"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "JPM Chase",
+      "position": "Senior UX Engineer",
+      "startDate": "2024",
+      "endDate": "Current",
+      "highlights": [
+        "Reduced development time for new microservice applications by over 50% through modernization of the code base and introduction of frontend best practices",
+        "Implemented multiple microservice applications using React, Typescript, Webpack and CSS modules",
+        "Provided mentorship to junior developers on frontend development best practices."
+      ]
+    },
+    {
+      "name": "RevLocal",
+      "position": "Senior Product Designer & Manager",
+      "startDate": "2021",
+      "endDate": "2023",
+      "highlights": [
+        "Performed research and design for a client-centric analytics dashboard, reached 60% client adoption within 2 weeks of launch.",
+        "Spearheaded the design and user research for a new website builder tool to that reduced time to create client websites by 75%",
+        "Trained and educated 35+ team members on product design best practices to standardize and streamline project execution",
+        "Built the foundation for an internal design system––comprised of a branded standardized set of components for use across company applications",
+        "Empowered product teams to conduct UX research and UI design to autonomously discover customer requirements"
+      ]
+    },
+    {
+      "name": "Insight Digital Innovation",
+      "position": "Senior UX Engineer",
+      "startDate": "2018",
+      "endDate": "2021",
+      "highlights": [
+        "Facilitated internal sessions, public workshops, and conferences on UX and front-end methodologies to audiences of up to 50+",
+        "Developed a React-based PWA for a major grocery chain for Kroger––improving order fulfillment by 20% – 30% nationwide",
+        "Served as team lead and mentor––providing front-end training to 3 junior developers to maximize their performance",
+        "Architected and led front-end development of a Vue JS and .NET C# IoT platform––adopted by 70+ hospitals across the country",
+        "Introduced automated browser testing and Jest unit tests to ensure safe code deployments and reliability",
+        "Conducted user research with doctors and hospital staff, nationwide and produced high fidelity, interactive prototypes"
+      ]
+    },
+    {
+      "name": "PriceSpider",
+      "position": "Software Engineer",
+      "startDate": "2020",
+      "endDate": "2020",
+      "highlights": [
+        "Developed public facing, data-driven interfaces with PHP Laravel, React JS and MySQL––enabling businesses to track product sales metrics",
+        "Partnered with UX, Product, and engineering teams to craft an internal design system to ensure cross team UI consistency"
+      ]
+    },
+    {
+      "name": "ProZ.com",
+      "position": "Software Engineer",
+      "startDate": "2017",
+      "endDate": "2018",
+      "highlights": [
+        "Developed and launched numerous features with PHP, MySQL and Vue JS (3 major projects)",
+        "Designed, developed, and scaled an audio based native language verification platform to 2800+ users",
+        "Increased ProZ.com livestream user engagement by 70% through the design and development of an interactive media platform"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Ohio University",
+      "area": "Computer Science",
+      "studyType": "Bachelor of Science",
+      "startDate": "2015"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Core Competencies",
+      "keywords": [
+        "Product Design",
+        " Database & API Development",
+        "Responsive Accessible Front-End Applications",
+        "UX / UI",
+        "User Research",
+        "Reporting",
+        "A11y Development",
+        "Test-Driven Development",
+        "Public Speaking",
+        "Team Leadership",
+        "Training",
+        "Management"
+      ]
+    },
+    {
+      "name": "Front-End",
+      "keywords": [
+        "React",
+        "Vue",
+        "Automated Testing",
+        "Figma",
+        "Azure",
+        "Jest",
+        "Cypress",
+        "Typescript",
+        "JavaScript",
+        "CSS",
+        "Microservices"
+      ]
+    },
+    {
+      "name": "Back-End",
+      "keywords": [
+        ".Net",
+        "PHP",
+        "MySQL",
+        "MS SQL",
+        "Azure",
+        "Jest",
+        "Cypress",
+        "NodeJS"
+      ]
+    }
+  ]
+}

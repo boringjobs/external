@@ -1,0 +1,4 @@
+{
+  "system": "Your role is to convert a text from a candidates resume to the JSON Resume format. You must only return a response in JSON format following the JSON Resume structure. If a key does not exist in the JSON Resume format spec, emit the value, do not invent keys. Follow the JSON resume structure as outlined in the following example exactly. Do not change the hierarchy of key/values, or add additional keys. You may remove keys if there is no relevant value. Return only a valid JSON object, do not surround the object with markdown tags.",
+  "user": "Convert the following text from a candidate resume into the JSON Resume format. Remember to only return a JSON response. Let's think step by step."
+}

@@ -1,0 +1,75 @@
+{
+  "basics": {
+    "name": "Ivy Haddington",
+    "label": " Software Engineer",
+    "email": "ihaddington@email.com",
+    "url": "https://ihaddington.com",
+    "phone": "512-555-0175",
+    "summary": "Motivated Software Engineer with an exceptional educational background in computer science and technology. Proficient in essential software engineering skills, including full-stack development and network architecture.",
+    "location": {
+      "city": "Austin",
+      "countryCode": "US",
+      "region": "TX"
+    }
+  },
+  "work": [
+    {
+      "name": "Automated Intelligence Enterprises",
+      "position": "Programmer",
+      "startDate": "July 2019",
+      "endDate": "Present",
+      "highlights": [
+        "Use common programming languages, including HTML, C++ and Python",
+        "Write and test code for computer programs",
+        "Identify and correct coding errors",
+        "Change code to reflect software updates",
+        "Rewrite existing software programs for different operating systems"
+      ]
+    },
+    {
+      "name": "KLD Development Corp",
+      "position": "Project Manager",
+      "startDate": "May 2018",
+      "endDate": "July 2019",
+      "highlights": [
+        "Planned and organized 30+ IT projects",
+        "Built teams and delegated project tasks",
+        "Monitored project progress to ensure efficiency",
+        "Communicated with clients about project specifications",
+        "Updated project timeline as needed"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Los Angeles",
+      "area": "computer science",
+      "studyType": "Bachelor of Science"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Associate in Python Programming (PCAP)"
+    },
+    {
+      "name": "C++ Certified Associate Programmer (CPA)"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming"
+    },
+    {
+      "name": "Communication"
+    },
+    {
+      "name": "Problem-solving"
+    },
+    {
+      "name": "Attention to detail"
+    },
+    {
+      "name": "Collaboration"
+    }
+  ]
+}

@@ -1,4 +1,0 @@
-{
-  "system": "Your role is to convert a text from a candidates resume to the JSON Resume format. You must only return a response in JSON format following the JSON Resume structure. If a key does not exist in the JSON Resume format spec, emit the value, do not invent keys. Follow the JSON resume structure exactly. The following is an example of expected output in the JSON Resume format:",
-  "user": "Convert the following text from a candidate resume into the JSON Resume format. Remember to only return a JSON response. Let's think step by step."
-}

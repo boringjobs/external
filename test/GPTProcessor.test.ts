@@ -3,17 +3,17 @@ import {
   ResumeStringToJSONResume,
   GetCSSStylingForHTMLResume,
 } from "../src/lib/GPTProcessor";
-import * as resumeToJsonPrompt from "../src/prompts/resume_to_json.json";
-import * as styleHtmlResumePrompt from "../src/prompts/style_html_resume.json";
+import * as resumeToJsonPrompt from "../src/prompts/prompt_resume_to_json.json";
+import * as styleHtmlResumePrompt from "../src/prompts/prompt_style_html_resume.json";
 
 describe("ResumeStringToJSONResume", () => {
   it("calls the openai library with the correct information", async () => {
     const result = await ResumeStringToJSONResume("jest sample resume");
-    expect(result.messages.length).toBe(2);
+    expect(result.messages.length).toBe(5);
     expect(result.model).toBe("gpt-3.5-turbo");
 
     expect(result.messages[0].content).toContain(resumeToJsonPrompt.system);
-    expect(result.messages[1].content).toContain("jest sample resume");
+    expect(result.messages[6].content).toContain("jest sample resume");
   });
 
   it("returns an empty object if chat completions fail", async () => {

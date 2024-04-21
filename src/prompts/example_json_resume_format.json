@@ -1,0 +1,119 @@
+{
+  "basics": {
+    "name": "FirstName LastName",
+    "label": "Job Title",
+    "image": "https://img.com/img.jpg",
+    "email": "name@email.com",
+    "phone": "+1 (123) 456-7890",
+    "url": "https://portfolio.com",
+    "summary": "Summary of applicant",
+    "location": {
+      "address": "Street Address",
+      "postalCode": "Zip Code",
+      "city": "City Name",
+      "countryCode": "US",
+      "region": "State Name"
+    },
+    "profiles": [
+      {
+        "network": "Website Name",
+        "username": "Username",
+        "url": "https://twitter.com/username"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Company Name",
+      "position": "Job Title",
+      "url": "https://company.com",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Summary of role",
+      "highlights": ["Highlight 1"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Organization Name",
+      "position": "Position Title",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Summary of role",
+      "highlights": ["Highlight 1"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University Name",
+      "url": "https://institution.com/",
+      "area": "Area of Study",
+      "studyType": "Degree",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": ["Course Name 1"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award Name",
+      "date": "2014-11-01",
+      "awarder": "Company Name",
+      "summary": "Summary of Award"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate Name",
+      "date": "2021-11-07",
+      "issuer": "Company Name",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication Name",
+      "publisher": "Company Name",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Summary of Publication"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Top Level Skill Name",
+      "level": "Proficiency Level",
+      "keywords": ["Skill 1"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Language Name",
+      "fluency": "Proficiency Level"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Top Level Interest Name",
+      "keywords": ["Interest 1"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Reference Name",
+      "reference": "Reference Information"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Project Name",
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Summary of Project",
+      "highlights": ["Highlight 1"],
+      "url": "https://project.com/"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "basics": {
+    "name": "Ebony Moore",
+    "label": "Accountant",
+    "email": "emoore@email.com",
+    "phone": "206-555-0149",
+    "summary": "Determined Accountant with three years of experience in personal and tax accounting. Excellent skills in mathematics, communication and organization with great proficiency in various accounting software.",
+    "location": {
+      "city": "Seattle",
+      "countryCode": "US",
+      "region": "WA"
+    }
+  },
+  "work": [
+    {
+      "name": "Gilmore Financial",
+      "position": "Certified Public Accountant",
+      "startDate": "October 2021",
+      "endDate": "Present",
+      "highlights": [
+        "Meet with clients to discuss their accounting needs",
+        "Compute taxes for clients during tax season",
+        "Monitoring and recording activity for accounts payable and accounts receivable",
+        "Prepare balance sheets for corporate clients",
+        "Create budget forecasts for clients to help with financial planning"
+      ]
+    },
+    {
+      "name": "Harrison Money Management",
+      "position": "Accountant",
+      "startDate": "August 2020",
+      "endDate": "October 2021",
+      "highlights": [
+        "Prepared tax returns for clients during tax season",
+        "Helped the internal audit team complete annual audits",
+        "Updated monthly reports to reflect the financial standings of each client"
+      ]
+    },
+    {
+      "name": "Harrison Money Management",
+      "position": "Junior Accountant",
+      "startDate": "May 2019",
+      "endDate": "August 2020",
+      "highlights": [
+        "Maintained accounts receivable and accounts payable for the department",
+        "Reviewed monthly payroll to ensure it's accurate before distribution",
+        "Prepared financial reports to share with clients"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Cloverfield College",
+      "area": "Business Administration in accounting",
+      "studyType": "Bachelor"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certified Public Accountant (CPA)"
+    },
+    {
+      "name": "Certified Financial Analyst (CFA)"
+    }
+  ]
+}

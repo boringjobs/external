@@ -1,0 +1,183 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Programmer",
+    "image": "",
+    "email": "john@gmail.com",
+    "phone": "(912) 555-4321",
+    "url": "https://johndoe.com",
+    "summary": "I'm a results driven professional programmer that delivers projects on-time and under-budget.",
+    "location": {
+      "address": "2712 Broadway St",
+      "postalCode": "94115",
+      "city": "San Francisco",
+      "countryCode": "US",
+      "region": "California"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "john",
+        "url": "https://twitter.com/john"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "devalexwhite",
+        "url": "https://linkedin.com/in/devalexwhite"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Evergreen Software",
+      "position": "Senior Engineer",
+      "url": "https://evergreensoftware.com",
+      "startDate": "2022-01-01",
+      "endDate": "Current",
+      "summary": "Senior Engineer on a team of 4. Building the future of Evergreen Software.",
+      "highlights": [
+        "React developer that introduced TailwindCSS",
+        "Gave internal presentations",
+        "Built ticketing software for internal issue tracker."
+      ]
+    },
+    {
+      "name": "SegFault LLC.",
+      "position": "Programmer L1",
+      "startDate": "2021-03-02",
+      "endDate": "2022-01-01",
+      "summary": "L1 Programmer on the digital advertising team.",
+      "highlights": [
+        "Built internal debugging tool using C++",
+        "Deployed and maintained Linux server environments."
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Colony Cats",
+      "position": "Adoption Center Volunteer",
+      "url": "https://colonycats.org/",
+      "startDate": "2012",
+      "endDate": "Present",
+      "summary": "Dedicated volunteer that helps cats get adopted.",
+      "highlights": ["Awarded 'Volunteer of the Month'"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Ohio University",
+      "url": "https://osu.edu/",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "score": "4.0",
+      "courses": ["DB1101 - Basic SQL", "CS 4000"]
+    },
+    {
+      "institution": "ITT Technical Institute",
+      "url": "https://itt.com/",
+      "area": "Communications",
+      "studyType": "Associates",
+      "startDate": "2009",
+      "endDate": "2013"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Best Idea",
+      "date": "2014-11-01",
+      "awarder": "24h Startup Fest",
+      "summary": "Worked with a team of 4 to design and develop a startup in 24 hours."
+    },
+    {
+      "title": "1st Place",
+      "awarder": "Columbus Cycling Group",
+      "summary": "Race winner."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "How to Debug With a Rubber Duck",
+      "publisher": "Amazon",
+      "releaseDate": "2014-10-01",
+      "url": "https://amazon.com/books/how-to-debug-rubber-duck",
+      "summary": "Wrote and published a book on best practices for solo debugging."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "Master",
+      "keywords": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "name": "Backend Development",
+      "level": "Novice",
+      "keywords": ["C#", ".NET", "Java"]
+    },
+    {
+      "name": "Design",
+      "level": "Advanced"
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Chinese",
+      "fluency": "Beginner"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": ["Ferrets", "Unicorns"]
+    },
+    {
+      "name": "Photography",
+      "keywords": ["DSLR", "Photoshop", "Photo Editing"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "jane@janedoe.com"
+    },
+    {
+      "name": "Thomas Jefferson",
+      "reference": "(123) 456-7890"
+    }
+  ],
+  "projects": [
+    {
+      "name": "C++ Compiler",
+      "startDate": "2019-01-01",
+      "endDate": "Current",
+      "description": "Wrote a C++ compiler using Microsoft BASIC. Got 201 stars on Github.",
+      "highlights": [
+        "Won award at AIHacks 2016",
+        "Bought out by a venture capital"
+      ],
+      "url": "https://github.com/cpp-compiler-basic"
+    },
+    {
+      "name": "GBA Emulator",
+      "startDate": "2015",
+      "endDate": "2023",
+      "description": "Designed and built a Gameboy Advanced Emulator using Python. Released on the Android Playstore.",
+      "url": "https://gba-android-emu.com/"
+    }
+  ]
+}
