@@ -6,15 +6,30 @@ import {
 } from "./lib/GPTProcessor";
 import { RenderTemplate } from "./lib/TemplateRenderer";
 import * as fs from "node:fs/promises";
+import * as commandLineArgs from "command-line-args";
 
-ParsePDF(__dirname + "/../test/sample.pdf").then(async (resumeText) => {
+const optionDefinitions: Array<commandLineArgs.OptionDefinition> = [
+  { name: "resume", alias: "r", type: String },
+  { name: "output", type: String, alias: "o", defaultValue: "output.html" },
+  {
+    name: "themeStyle",
+    alias: "t",
+    type: String,
+    multiple: true,
+    defaultValue: ["minimal", "clean", "modern", "simple", "professional"],
+  },
+];
+
+const options = commandLineArgs(optionDefinitions);
+
+if (!options.resume) {
+  throw new Error("A resume path must be provided.");
+}
+
+const themeKeywords = options.themeStyle;
+
+ParsePDF(options.resume).then(async (resumeText) => {
   const jsonResume = await ResumeStringToJSONResume(resumeText);
-  // let resumeString = await fs.readFile(
-  //   __dirname + "/../test/sample.json",
-  //   "utf-8"
-  // );
-
-  // const jsonResume = JSON.parse(resumeString);
 
   try {
     const htmlResumeContent = await RenderTemplate(
@@ -23,14 +38,6 @@ ParsePDF(__dirname + "/../test/sample.pdf").then(async (resumeText) => {
         resume: jsonResume,
       }
     );
-
-    const themeKeywords = [
-      "minimal",
-      "clean",
-      "modern",
-      "simple",
-      "professional",
-    ];
 
     const cssStyling = await GetCSSStylingForHTMLResume(
       themeKeywords,
@@ -46,15 +53,7 @@ ParsePDF(__dirname + "/../test/sample.pdf").then(async (resumeText) => {
       }
     );
 
-    await fs.writeFile(
-      __dirname + "/../resume.json",
-      JSON.stringify(jsonResume)
-    );
-
-    await fs.writeFile(
-      __dirname + "/../resume.html",
-      htmlResumeDocument as string
-    );
+    await fs.writeFile(options.output, htmlResumeDocument as string);
   } catch (error: unknown) {
     if (error instanceof Error) console.error(error.message);
     else console.error(error);

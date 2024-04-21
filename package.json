@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/command-line-args": "^5.2.3",
     "@types/pdf-parse": "^1.1.4",
     "@types/twig": "^1.12.16",
     "eslint-plugin-jest": "^28.2.0",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "@types/jest": "^29.5.12",
+    "command-line-args": "^5.2.1",
     "dotenv": "^16.4.5",
     "openai": "^4.33.0",
     "pdf-parse": "^1.1.1",
