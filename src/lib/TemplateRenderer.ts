@@ -2,7 +2,7 @@ import * as Twig from "twig";
 
 export const RenderTemplate = (
   templatePath: string,
-  data: Object
+  data: object
 ): Promise<string> => {
   return new Promise((resolve, reject) => {
     Twig.renderFile(templatePath, data, (err, result) => {

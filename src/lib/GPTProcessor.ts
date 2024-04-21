@@ -24,14 +24,24 @@ export const ResumeStringToJSONResume = async (resume: string) => {
     model: process.env.OPEN_AI_MODEL ?? "gpt-3.5-turbo",
   });
 
-  return JSON.parse(chatCompletion.choices[0].message.content ?? "{}");
+  if (!chatCompletion?.choices?.length) return {};
+
+  try {
+    const json = JSON.parse(
+      chatCompletion?.choices[0]?.message?.content ?? "{}"
+    );
+
+    return json;
+  } catch (e) {
+    return {};
+  }
 };
 
 export const GetCSSStylingForHTMLResume = async (
   themeKeywords: Array<string>,
   html: string
 ) => {
-  styleHtmlResumePrompt.user.replace(
+  const styleHtmlResumeUserPrompt = styleHtmlResumePrompt.user.replace(
     "{THEME_KEYWORDS}",
     themeKeywords.join(", ")
   );
@@ -43,7 +53,7 @@ export const GetCSSStylingForHTMLResume = async (
 
   const userRole: ChatCompletionMessageParam = {
     role: "user",
-    content: styleHtmlResumePrompt.user + `\n${html}`,
+    content: styleHtmlResumeUserPrompt + `\n${html}`,
   };
 
   const chatCompletion = await openAI.chat.completions.create({
@@ -51,5 +61,6 @@ export const GetCSSStylingForHTMLResume = async (
     model: process.env.OPEN_AI_MODEL ?? "gpt-3.5-turbo",
   });
 
-  return chatCompletion.choices[0].message.content ?? "";
+  if (!chatCompletion?.choices?.length) return "";
+  else return chatCompletion?.choices[0]?.message?.content ?? "";
 };
