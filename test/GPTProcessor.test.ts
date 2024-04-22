@@ -8,12 +8,13 @@ import * as styleHtmlResumePrompt from "../src/prompts/prompt_style_html_resume.
 
 describe("ResumeStringToJSONResume", () => {
   it("calls the openai library with the correct information", async () => {
+    setShouldFail(false);
     const result = await ResumeStringToJSONResume("jest sample resume");
-    expect(result.messages.length).toBe(5);
+    expect(result.messages.length).toBe(6);
     expect(result.model).toBe("gpt-3.5-turbo");
 
     expect(result.messages[0].content).toContain(resumeToJsonPrompt.system);
-    expect(result.messages[6].content).toContain("jest sample resume");
+    expect(result.messages[5].content).toContain("jest sample resume");
   });
 
   it("returns an empty object if chat completions fail", async () => {
@@ -25,6 +26,8 @@ describe("ResumeStringToJSONResume", () => {
 
 describe("GetCSSStylingForHTMLResume", () => {
   it("calls the openai library with the correct information", async () => {
+    setShouldFail(false);
+
     const result = await GetCSSStylingForHTMLResume(
       ["jeststyle1", "jeststyle2"],
       "jest sample html"

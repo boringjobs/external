@@ -134,7 +134,7 @@ export const GetCSSStylingForHTMLResume = async (
   };
 
   const chatCompletion = await openAI.chat.completions.create({
-    messages: [systemRole, exampleRoleA, userRole],
+    messages: [systemRole, exampleRoleA, exampleRoleB, userRole],
     model: process.env.OPEN_AI_MODEL ?? "gpt-3.5-turbo",
   });
 

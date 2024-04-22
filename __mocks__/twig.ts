@@ -7,7 +7,7 @@ export const setShouldFail = (shouldFail: boolean) => {
 export const renderFile = (
   path: string,
   data: object,
-  callback: (error?: Error, result?: string) => {}
+  callback: (error?: Error, result?: string) => void
 ) => {
   if (resultFails) callback(new Error("Error"), undefined);
   else

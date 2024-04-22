@@ -10,7 +10,7 @@ export default class OpenAI {
   chat = {
     completions: {
       create: async (paramsObject: object) => {
-        return new Promise((resolve, reject) =>
+        return new Promise((resolve) =>
           resolve(
             resultFails
               ? ""
