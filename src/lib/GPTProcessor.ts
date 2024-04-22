@@ -13,6 +13,11 @@ import * as exampleResumeJsonB from "../prompts/example_resume_json_b.json";
 import * as exampleResumeJsonC from "../prompts/example_resume_json_c.json";
 import * as exampleResumeJsonD from "../prompts/example_resume_json_d.json";
 
+import * as exampleWebsiteA from "../prompts/example_website_a.json";
+
+import * as exampleCSSA from "../prompts/example_css_a.json";
+import * as exampleCSSB from "../prompts/example_css_a.json";
+
 import * as json_resume_format from "../prompts/example_json_resume_format.json";
 
 const openAI = new OpenAI({
@@ -29,33 +34,36 @@ export const ResumeStringToJSONResume = async (resume: string) => {
   const exampleRoleA: ChatCompletionMessageParam = {
     role: "system",
     content:
-      "Here is an example resume input:\n" +
+      "The following is an example resume input:\n" +
       exampleResumeA.content +
-      "\nThis is the expected JSON resume output:\n" +
+      "\nThe following is the expected JSON resume output:\n" +
       JSON.stringify(exampleResumeJsonA),
   };
+
   const exampleRoleB: ChatCompletionMessageParam = {
     role: "system",
     content:
-      "Here is an example resume input:\n" +
+      "The following is an example resume input:\n" +
       exampleResumeB.content +
-      "\nThis is the expected JSON resume output:\n" +
+      "\nThe following is the expected JSON resume output:\n" +
       JSON.stringify(exampleResumeJsonB),
   };
+
   const exampleRoleC: ChatCompletionMessageParam = {
     role: "system",
     content:
-      "Here is an example resume input:\n" +
+      "The following is an example resume input:\n" +
       exampleResumeC.content +
-      "\nThis is the expected JSON resume output:\n" +
+      "\nThe following is the expected JSON resume output:\n" +
       JSON.stringify(exampleResumeJsonC),
   };
+
   const exampleRoleD: ChatCompletionMessageParam = {
     role: "system",
     content:
-      "Here is an example resume input:\n" +
+      "The following is an example resume input:\n" +
       exampleResumeD.content +
-      "\nThis is the expected JSON resume output:\n" +
+      "\nThe following is the expected JSON resume output:\n" +
       JSON.stringify(exampleResumeJsonD),
   };
 
@@ -102,13 +110,31 @@ export const GetCSSStylingForHTMLResume = async (
     content: styleHtmlResumePrompt.system,
   };
 
+  const exampleRoleA: ChatCompletionMessageParam = {
+    role: "system",
+    content:
+      "The following is an example html resume input:\n" +
+      exampleWebsiteA.content +
+      "The following is an example of a CSS output:\n" +
+      exampleCSSA.content,
+  };
+
+  const exampleRoleB: ChatCompletionMessageParam = {
+    role: "system",
+    content:
+      "The following is an example html resume input:\n" +
+      exampleWebsiteA.content +
+      "The following is an example of a CSS output:\n" +
+      exampleCSSB.content,
+  };
+
   const userRole: ChatCompletionMessageParam = {
     role: "user",
     content: styleHtmlResumeUserPrompt + `\n${html}`,
   };
 
   const chatCompletion = await openAI.chat.completions.create({
-    messages: [systemRole, userRole],
+    messages: [systemRole, exampleRoleA, userRole],
     model: process.env.OPEN_AI_MODEL ?? "gpt-3.5-turbo",
   });
 

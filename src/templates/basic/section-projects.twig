@@ -5,29 +5,33 @@
   <main id="projects-content">
     <ul id="projects-list">
       {% for project in resume.projects %}
-        <li class="project">
-          {% if project.name %}
-            <h3 class="project-name">{{ project.name }}</h3>
-          {% endif %}
-          {% if project.startDate %}
-            <p class="project-start">
-              {{ project.startDate }}<span class="project-end">{{ ' - ' }}{{ project.endDate|default('Present') }}</span>
+      <li class="project">
+        {% if project.name %}
+        <h3 class="project-name">{{ project.name }}</h3>
+        {% endif %}
+        {% if project.startDate %}
+        <p class="project-start">
+          {{ project.startDate }}<span class="project-end">{{ ' - ' }}{{ project.endDate|default('Present') }}</span>
+        </p>
+        {% endif %}
+        {% if project.url %}
+        <a class="project-url" href="{{ project.url }}">{{ project.url }}</a>
+        {% endif %}
+        {% if project.description %}
+        <p class="project-description">{{ project.description }}</p>
+        {% endif %}
+        {% if project.highlights %}
+        <ul class="project-hightlights-list">
+          {% for highlight in project.highlights %}
+          <li class="project-highlight">
+            <p>
+              {{ highlight }}
             </p>
-          {% endif %}
-          {% if project.url %}
-            <a class="project-url" href="{{ project.url }}">{{ project.url }}</a>
-          {% endif %}
-          {% if project.description %}
-            <p class="project-description">{{ project.description }}</p>
-          {% endif %}
-          {% if project.highlights %}
-            <ul class="project-hightlights-list">
-              {% for highlight in project.highlights %}
-                <li class="project-highlight">{{ highlight }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
       {% endfor %}
     </ul>
   </main>

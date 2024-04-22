@@ -9,7 +9,7 @@
           {% if volunteer.organization %}
             <h3 class="volunteer-organization">{{ volunteer.organization }}<span class="volunteer-position">{{ volunteer.position ? ' - ' : '' }}{{ volunteer.position }}</span></h3>
           {% endif %}
-          {% if volunter.startDate %}
+          {% if volunteer.startDate %}
             <p class="volunteer-start">
               {{ volunteer.startDate }} - <span class="volunteer-end">{{ volunteer.endDate|default('Present') }}</span>
             </p>
@@ -20,7 +20,11 @@
           {% if volunteer.highlights %}
             <ul class="volunteer-highlights-list">
               {% for highlight in volunteer.highlights %}
-                <li class="volunteer-highlight">{{ highlight }}</li>
+                <li class="volunteer-highlight">
+                  <p>
+                    {{ highlight }}
+                  </p>
+                </li>
               {% endfor %}
             </ul>
           {% endif %}
